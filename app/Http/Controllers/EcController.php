@@ -51,7 +51,7 @@ class EcController extends Controller
         // 'param' => $paramと代入し直した方がいい？
     }
 
-    public function purchase
+    public function purchase()
     {
         $user = Auth::user();
         $items = Order::where('cart_id', 1)->andWhere('user_id', $user -> id)->get();
